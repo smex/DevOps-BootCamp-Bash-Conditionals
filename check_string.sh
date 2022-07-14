@@ -1,3 +1,7 @@
 #!/bin/bash
 
-# Place your code here
+dig=${1//[^[:digit:]]/}
+sp=${1//[^\!@#$%^&()_+]/}
+ch=${1//[^[:alpha:]]/}
+
+echo "Numbers: ${#dig} Symbols: ${#sp} Letters: ${#ch}"
